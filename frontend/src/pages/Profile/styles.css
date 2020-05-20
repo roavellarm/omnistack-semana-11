@@ -14,6 +14,7 @@
   font-size: 20px;
   margin-left: 24px;
 }
+
 .profile-container header img {
   height: 64px;
 }
@@ -21,7 +22,7 @@
 .profile-container header a {
   width: 260px;
   margin-left: auto;
-  margin-left: 0;
+  margin-top: 0;
 }
 
 .profile-container header button {
@@ -72,6 +73,16 @@
   display: block;
   margin-bottom: 16px;
   color: #41414d;
+}
+
+.profile-container ul li p + strong {
+  margin-top: 32px;
+}
+
+.profile-container ul li p {
+  color: #737380;
+  line-height: 21px;
+  font-size: 16px;
 }
 
 /* TODO:  min 1:46:59 */
