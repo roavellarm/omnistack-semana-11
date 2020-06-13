@@ -31,3 +31,8 @@ $ npm install @react-navigation/stack
 Estilizacao
 
 \$ expo install expo-constants
+
+
+
+Pra enviar email
+$ expo install expo-mail-composer
