@@ -2,7 +2,7 @@
   "expo": {
     "name": "Be The Hero",
     "slug": "bethehero",
-    "platforms": ["ios", "android", "web"],
+    "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,7 +16,13 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rodrigoavellar.bethehero",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.rodrigoavellar.bethehero",
+      "versionCode": 1
     }
   }
 }
