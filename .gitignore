@@ -3,3 +3,4 @@ dist
 mobile
 frontend
 .env
+*.sqlite

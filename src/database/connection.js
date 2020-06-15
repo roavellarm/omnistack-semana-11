@@ -4,7 +4,7 @@ const configuration = require('../../knexfile')
 function config() {
   if (process.env.NODE_ENV === 'test') return configuration.test
   if (process.env.NODE_ENV === 'development') return configuration.development
-  if (process.env.NODE_ENV === 'production') return configuration.development
+  if (process.env.NODE_ENV === 'production') return configuration.production
   return null
 }
 

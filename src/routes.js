@@ -36,11 +36,11 @@ routes.get(
 
 routes.get(
   '/incidents',
-  // celebrate({
-  //   [Segments.QUERY]: Joi.object().keys({
-  //     page: Joi.number(),
-  //   }),
-  // }),
+  celebrate({
+    [Segments.QUERY]: Joi.object().keys({
+      page: Joi.number(),
+    }),
+  }),
   IncidentController.index
 )
 

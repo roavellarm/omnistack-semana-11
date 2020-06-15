@@ -21,6 +21,17 @@ module.exports = {
     useNullAsDefault: true,
   },
 
+  production: {
+    client: 'sqlite3',
+    connection: {
+      filename: './dist/database/production.sqlite',
+    },
+    migrations: {
+      directory: './dist/database/migrations',
+    },
+    useNullAsDefault: true,
+  },
+
   // production: {
   //   client: 'postgresql',
   //   connection: {
