@@ -49,7 +49,7 @@ module.exports = {
       max: 10,
     },
     migrations: {
-      directory: '/database/migrations',
+      directory: './dist/database/migrations',
       tableName: 'knex_migrations',
     },
   },
