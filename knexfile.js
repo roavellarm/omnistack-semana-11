@@ -23,43 +23,19 @@ module.exports = {
 
   staging: {
     client: 'pg',
-    connection: {
-      database: process.env.STAGING_DB,
-      user: process.env.STAGING_DB_USER,
-      password: process.env.STAGING_DB_PASSWORD,
-    },
-    pool: {
-      min: 2,
-      max: 10,
-    },
-    migrations: {
-      tableName: 'knex_migrations',
-    },
-  },
-
-  production: {
-    client: 'pg',
-    connection: {
-      database: process.env.PRODUCTION_DB,
-      user: process.env.PRODUCTION_DB_USER,
-      password: process.env.PRODUCTION_DB_PASSWORD,
-    },
-    pool: {
-      min: 2,
-      max: 10,
-    },
+    connection: process.env.DATABASE_URL,
     migrations: {
       directory: './dist/database/migrations',
       tableName: 'knex_migrations',
     },
   },
 
-  // production: {
-  //   client: 'postgresql',
-  //   connection: process.env.DATABASE_URL,
-  //   searchPath: ['public'],
-  //   migrations: {
-  //     tableName: 'knex_migrations',
-  //   },
-  // },
+  production: {
+    client: 'pg',
+    connection: process.env.DATABASE_URL,
+    migrations: {
+      directory: './dist/database/migrations',
+      tableName: 'knex_migrations',
+    },
+  },
 }
