@@ -1,7 +1,12 @@
-const app = require("./app");
+const dotenv = require('dotenv')
 
-const PORT = process.env.PORT || 3333;
+dotenv.config()
 
-app.listen(PORT);
+const app = require('./app')
 
-console.log(`App running in port ${PORT}`);
+const { PORT } = process.env
+
+app.listen(PORT)
+
+// eslint-disable-next-line no-console
+console.log(`App running in port ${PORT}`)

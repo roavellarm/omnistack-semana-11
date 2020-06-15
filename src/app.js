@@ -1,37 +1,17 @@
-const express = require("express");
-const cors = require("cors");
-const { errors } = require("celebrate");
-const routes = require("./routes");
+const dotenv = require('dotenv')
 
-const app = express();
+dotenv.config()
 
-app.use(cors());
-app.use(express.json());
-app.use(routes);
-app.use(errors());
+const express = require('express')
+const cors = require('cors')
+const { errors } = require('celebrate')
+const routes = require('./routes')
 
-module.exports = app;
-/**
- * Rota / Recurso
- *
- * Métodos HTTP:
- *
- * GET: Buscar/listar uma informação do back-end
- * POST: Criar uma informação no back-end
- * PUT: Aletera uma informação do back-end
- * DELETE: Deletar uma infomação no back-end
- *
- * Tipos de parâmetros:
- * Query params: Parametros nomeados/enviados na rota após "?" (filtros, paginação)
- * Routes params: Parametros utilizados para identificar recursos
- * Request Body: Corpo da requisição utilizado para criar ou alterar recursos
- *
- * Bancos de Dados:
- * SQL: MySQL, SQLite, PostgreSQL, Oracle, Microsoft SQL Server
- * NoSQL: MongoDB, CouchDB, etc.
- *
- *
- * Driver: SELECT * FROM user
- * Query Builder: table('users').select('*').where()
- *
- */
+const app = express()
+
+app.use(cors())
+app.use(express.json())
+app.use(routes)
+app.use(errors())
+
+module.exports = app

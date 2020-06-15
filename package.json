@@ -2,12 +2,13 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "NODE_ENV=production node dist",
-    "build": "babel src -d dist",
-    "dev": "nodemon src/server.js",
-    "test": "cross-env NODE_ENV=teste jest"
+    "test": "cross-env NODE_ENV=test jest",
+    "dev": "cross-env NODE_ENV=development nodemon src/server.js",
+    "start": "cross-env NODE_ENV=production node dist/server.js",
+    "build": "babel src -d dist ",
+    "lint": "eslint --ext .js --ignore-path .gitignore ."
   },
   "keywords": [],
   "author": "",
@@ -21,13 +22,21 @@
     "celebrate": "^12.1.1",
     "cors": "^2.8.5",
     "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "knex": "^0.21.1",
-    "sqlite3": "^4.2.0"
+    "pg": "^8.2.1"
   },
   "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.0.1",
     "nodemon": "^2.0.3",
+    "prettier": "^2.0.5",
+    "sqlite3": "^4.2.0",
     "supertest": "^4.0.2"
   }
 }
