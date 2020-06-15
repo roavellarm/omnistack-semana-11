@@ -63,18 +63,22 @@ export default function Incidents() {
         onEndReachedThreshold={0.2}
         renderItem={({ item: incident }) => (
           <View style={styles.incident}>
-            <Text style={styles.incidentProperty}>ONG:</Text>
-            <Text style={styles.incidentValue}>{incident.name}</Text>
-
-            <Text style={styles.incidentProperty}>CASO:</Text>
-            <Text style={styles.incidentValue}>{incident.title}</Text>
-
-            <Text style={styles.incidentProperty}>VALOR:</Text>
-            <Text style={styles.incidentValue}>
-              {Intl.NumberFormat('pt-BR', {
-                style: 'currency',
-                currency: 'BRL',
-              }).format(incident.value)}
+            <Text style={styles.incidentProperty}>
+              {`ONG:   `}
+              <Text style={styles.incidentValue}>{incident.name}</Text>
+            </Text>
+            <Text style={styles.incidentProperty}>
+              {`CASO:   `}
+              <Text style={styles.incidentValue}>{incident.title}</Text>
+            </Text>
+            <Text style={styles.incidentProperty}>
+              {`VALOR:   `}
+              <Text style={styles.incidentValue}>
+                {Intl.NumberFormat('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL',
+                }).format(incident.value)}
+              </Text>
             </Text>
 
             <TouchableOpacity
